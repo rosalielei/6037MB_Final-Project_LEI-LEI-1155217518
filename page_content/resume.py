@@ -1,12 +1,16 @@
 import streamlit as st
-import os
+c
 from streamlit_pdf_viewer import pdf_viewer
 
 def resume_page():
     st.title("LEI LEI")
 
     # 所有现有的内容保持不变
-    st.header("Contact Information")
+    st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h2 style='margin: 0; color: #212529;'>Contact Information</h2>
+        </div>
+        """, unsafe_allow_html=True)
     st.markdown("""
     - **Email:** lleirosalie@163.com
     - **Phone:** (+852) 4662 8851
@@ -15,7 +19,11 @@ def resume_page():
     - **Address:** 8 Shan Tong Road, Mid-Levels, Tai Po, New Territories, Hong Kong
     """)
 
-    st.header("Professional Summary")
+    st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px; margin-top: 20px;'>
+            <h2 style='margin: 0; color: #212529;'>Professional Summary</h2>
+        </div>
+        """, unsafe_allow_html=True)
     st.markdown("""
     Highly analytical Master's candidate in Marketing (CUHK) with a strong foundation in Economics (ECNU) and international experience (UC Berkeley). Proven ability to drive marketing growth and optimize performance using data analytics, market research, and digital strategies. Seeking a challenging marketing or data-driven role to apply advanced analytical and cross-cultural communication skills.
     """)
@@ -23,7 +31,11 @@ def resume_page():
     st.markdown("---")
 
     # 添加PDF预览部分
-    st.header("Resume Preview")
+    st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h2 style='margin: 0; color: #212529;'>Resume Preview</h2>
+        </div>
+        """, unsafe_allow_html=True)
     
     pdf_path = "static/docs/resume.pdf"
     if os.path.exists(pdf_path):

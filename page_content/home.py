@@ -3,27 +3,44 @@ from PIL import Image
 import os
 
 def home_page():
-    left_col, right_col = st.columns(2)
+    # 创建两列布局，调整比例
+    left_col, right_col = st.columns([3, 2])  # 调整比例为3:2
+    
+    # 左侧介绍
     left_col.markdown(
         """
-        <h4>LEI LEI</h4>
-        Status: Recent Master's Graduate in Marketing<br>
-        Graduate: Chinese University of Hong Kong<br>
-        Address: 8 Shan Tong Road, Mid-Levels, Tai Po, New Territories, Hong Kong<br>
-        Email: <a href="mailto:sarah.johnson@example.com">lleirosalie@163.com</a></p>
+        <div style='padding: 20px;'>
+            <h2 style='margin-bottom: 20px;'>LEI LEI</h2>
+            <p style='font-size: 16px; line-height: 1.6;'>
+                Status: Recent Master's Graduate in Marketing<br>
+                Graduate: Chinese University of Hong Kong<br>
+                Address: 8 Shan Tong Road, Mid-Levels, Tai Po, New Territories, Hong Kong<br>
+                Email: <a href="mailto:lleirosalie@163.com">lleirosalie@163.com</a>
+            </p>
+        </div>
         """,
         unsafe_allow_html=True
     )
 
-    # add a photo to the right column
+    # 右侧照片
     image_path = os.path.join("static", "images", "image.png")
     if os.path.exists(image_path):
         image = Image.open(image_path)
-        right_col.image(image, width=200)
+        right_col.markdown("<div style='padding: 20px;'>", unsafe_allow_html=True)
+        right_col.image(image, width=250)  # 调整图片大小
+        right_col.markdown("</div>", unsafe_allow_html=True)
     else:
         right_col.warning("Profile image not found")
 
     st.markdown("---")
+
+    st.markdown(
+        """
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h3 style='margin: 0; color: #212529;'>About Me</h3>
+        </div>
+        """
+    )
 
     st.markdown(
         """
@@ -43,6 +60,14 @@ def home_page():
         - **Coding**: Proficient in Offices, Python, Stata, R, Web Crawling, etc.
         - **Language**: Chinese(native), English (TOEFL 95), GRE (315+) 
         - **Certification**: Xiaohongshu Marketing Competence Certification: Primary
+        """
+    )
+
+    st.markdown(
+        """
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h3 style='margin: 0; color: #212529;'>Skills</h3>
+        </div>
         """
     )
 

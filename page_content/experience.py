@@ -2,7 +2,11 @@ import streamlit as st
 from components.interactive import display_interactive_chart
 
 def experience_page():
-    st.markdown("## Professional Experience")
+    st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h2 style='margin: 0; color: #212529;'>Professional Experience</h2>
+        </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("""
     ### Commercial Advertising Product Operation Internship
@@ -14,6 +18,13 @@ def experience_page():
     """)
     
     st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h3 style='margin: 0; color: #212529;'>Xiaohongshu advertising optimization - Data Intern</h3>
+        </div>
+        """, unsafe_allow_html=True
+    )
+    
+    st.markdown("""
     ### Xiaohongshu advertising optimization - Data Intern
     **Inly Media Co., Ltd.** | *Nov 2023- Feb 2024*
     
@@ -21,16 +32,25 @@ def experience_page():
     - Social media delivery and optimization: familiar with Xiaohongshu's platform delivery rules and product planting logic, passed the professional ability certification of Xiaohongshu marketing talents. During the period of client advertising, cooperate with the product launch, build the advertising plan, observe the performance of the advertising, track and optimize the parameters of the advertising effect, like exposure, ctr, cpc, cpe,""")
     
     st.markdown("""
-    ### University Department - Marketing Intern (Online)
-    **Hygiene Heroes (a non-profit organization)** | *Jan 2025 - April 2025*
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h3 style='margin: 0; color: #212529;'>University Department - Marketing Intern (Online)</h3>
+        </div>
+        """
+    )
     
-    - Content and marketing work: Responsible for Xiaohongshu content creation, format optimization, and KOL collaboration. Planned and executed marketing activities, designed promotional materials, and supported product brand building.
-    - Community operation and market research: Operated and maintained a university student community, collected user feedback, organized community activities, and assisted in analyzing user needs and providing suggestions for product improvement.
-    """)
+    st.markdown("### University Department - Marketing Intern (Online)")
+    st.markdown("**Hygiene Heroes (a non-profit organization)** | *Jan 2025 - April 2025*")
+    st.markdown("- Content and marketing work: Responsible for Xiaohongshu content creation, format optimization, and KOL collaboration. Planned and executed marketing activities, designed promotional materials, and supported product brand building.")
+    st.markdown("- Community operation and market research: Operated and maintained a university student community, collected user feedback, organized community activities, and assisted in analyzing user needs and providing suggestions for product improvement.")
     
     st.markdown("---")
     
-    st.markdown("## Projects")
+    st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h2 style='margin: 0; color: #212529;'>Projects</h2>
+        </div>
+        """, unsafe_allow_html=True
+    )
     
     projects = [
         {
@@ -66,11 +86,22 @@ def experience_page():
     
     st.markdown("---")
     
-    st.markdown("## Professional Skills")
+    st.markdown("""
+        <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+            <h2 style='margin: 0; color: #212529;'>Professional Skills</h2>
+        </div>
+        """
+    )
     
     col1, col2 = st.columns(2)
     
     with col1:
+        st.markdown("""
+            <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+                <h3 style='margin: 0; color: #212529;'>Technical Skills</h3>
+            </div>
+            """, unsafe_allow_html=True
+        )
         st.markdown("""
         ### Technical Skills
         - **Programming Languages:** Python, R, SQL, JavaScript
@@ -81,6 +112,12 @@ def experience_page():
         """)
         
     with col2:
+        st.markdown("""
+            <div style='background-color: #FFE4C4; padding: 10px; border-radius: 5px;'>
+                <h3 style='margin: 0; color: #212529;'>Soft Skills</h3>
+            </div>
+            """, unsafe_allow_html=True
+        )
         st.markdown("""
         ### Soft Skills
         - **Communication:** Excellent written and verbal communication
